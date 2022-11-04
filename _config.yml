@@ -18,19 +18,19 @@
 # Feel free to change these! For more info, refer to:
 # ~> https://jekyllrb.com/docs/configuration/options/
 
-title:            'Wax'
-description:      'Minimal Exhibitions with Jekyll'
-url:              'https://minicomp.github.io'
-baseurl:          '/wax'
-copyright:        'Example copyright org, 2019'
-logo:             '/assets/logo.png'
+title: "Coleção Sebastião Lacerda"
+description: "Exposição virtual"
+url: "https://martimpassos.github.io"
+baseurl: "/inicio"
+copyright: "Example copyright org, 2019"
+logo: "/assets/logo.png"
 
 # ---------------------------------------------------------------
 # BUILD SETTINGS
 # ---------------------------------------------------------------
 # Best not to mess with these unless you know what you're doing!
 
-permalink: 'pretty'
+permalink: "pretty"
 sass:
   style: compressed
 exclude:
@@ -42,16 +42,15 @@ exclude:
 incremental: true
 webrick:
   headers:
-    'Access-Control-Allow-Origin': '*'
+    "Access-Control-Allow-Origin": "*"
 kramdown:
- auto_ids:       true
- footnote_nr:    1
- entity_output:  as_char
- footnote_backlink: "&#x21a9;&#xfe0e;"
- toc_levels:     1..6
- smart_quotes:   lsquo,rsquo,ldquo,rdquo
- enable_coderay: false
-
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  footnote_backlink: "&#x21a9;&#xfe0e;"
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
 
 # --------------------------------------------------------------
 # COLLECTION SETTINGS
@@ -65,13 +64,13 @@ kramdown:
 collections:
   exhibits:
     output: true
-  qatar: # name of collection
+  sebastiao-lacerda: # name of collection
     output: true # makes sure pages are output as html files
-    layout: 'qatar_item' # the layout for the pages to use
+    layout: "sl_item" # the layout for the pages to use
     metadata:
-      source: 'qatar.csv' # path to the metadata file within `_data`
+      source: "sebastiao-lacerda.csv" # path to the metadata file within `_data`
     images:
-      source: 'raw_images/qatar' # path to the directory of images within `_data`
+      source: "raw_images/sebastiao-lacerda" # path to the directory of images within `_data`
 
 # --------------------------------------------------------------
 # SEARCH INDEX SETTINGS
@@ -83,17 +82,15 @@ collections:
 
 search:
   main:
-    index: '/search/index.json' # file the index will get written to
+    index: "/search/index.json" # file the index will get written to
     collections:
-      qatar:
+      sebastiao-lacerda:
         content: false # whether or not to index page content
         fields: # the metadata fields to index
-          - artist
-          - location
+          - autor
           - label
           - _date
-          - object_type
-          - current_location
+          - tipo
 
 # --------------------------------------------------------------
 # SITE MENU SETTINGS
@@ -103,26 +100,24 @@ search:
 # submenu via `sub`.
 
 menu:
-  - label: 'About'
+  - label: "Sobre"
     sub:
-      - label: 'Wax'
-        link: '/about/'
-      - label: 'Documentation'
-        link: 'https://minicomp.github.io/wiki/wax/'
-      - label: 'Credits'
-        link: '/credits/'
-  - label: 'Exhibits'
+      - label: "Coleção Sebastião Lacerda"
+        link: "/sobre/"
+      - label: "Créditos"
+        link: "/creditos/"
+  - label: "Exposições"
     sub:
-      - label: 'Inline Parallax Image'
-        link: '/exhibits/a/'
-      - label: 'Inline Image References'
-        link: '/exhibits/b/'
-  - label: 'Browse'
-    link: '/collection/'
-  - label: 'Search'
-    link: '/search/'
-  - label: 'Reuse'
-    link: '/reuse/'
+      - label: "Inline Parallax Image"
+        link: "/exhibits/a/"
+      - label: "Inline Image References"
+        link: "/exhibits/b/"
+  - label: "Explorar"
+    link: "/colecao/"
+  - label: "Buscar"
+    link: "/busca/"
+  - label: "Reutilizar"
+    link: "/reuso/"
 
 # --------------------------------------------------------------
 # SITE FOOTER SETTINGS
@@ -131,13 +126,12 @@ menu:
 
 footer:
   links:
-    - label: 'GitHub'
-      link: 'https://github.com/minicomp/wax'
-    - label: 'Credits'
-      link: '/credits'
-    - label: 'Contact'
-      link: 'https://gitter.im/minicomp/wax/'
+    - label: "GitHub"
+      link: "https://github.com/martimpassos/exposicao-virtual"
+    - label: "Créditos"
+      link: "/creditos"
+    - label: "Contato"
+      link: "mailto:martim.passos@ims.com.br"
   logos:
-    - img: '/img/logo.png'
-
+    - img: "/img/logo.png"
 # FIN

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Search the Collection
-permalink: /search/
+permalink: /busca/
 ---
 
 {% include search_box.html search='main' %}

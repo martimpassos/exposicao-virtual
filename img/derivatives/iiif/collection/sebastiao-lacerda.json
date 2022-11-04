@@ -1,0 +1,21 @@
+---
+layout: none
+---
+{
+  "@context": "http://iiif.io/api/presentation/2/context.json",
+  "@id": "{{ '/' | absolute_url }}img/derivatives/iiif/collection/sebastiao-lacerda.json",
+  "@type": "sc:Collection",
+  "label": "sebastiao-lacerda",
+  "manifests": [
+    {
+      "@id": "{{ '/' | absolute_url }}img/derivatives/iiif/32484256/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "32484256"
+    },
+    {
+      "@id": "{{ '/' | absolute_url }}img/derivatives/iiif/32484257/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "32484257"
+    }
+  ]
+}

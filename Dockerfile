@@ -13,6 +13,8 @@ RUN apt-get install -y libvips
 
 # Add imagemagick PDF fix
 RUN sed -i '/disable ghostscript format types/,+6d' /etc/ImageMagick-6/policy.xml
+# Allocate more memory for ImageMagick
+RUN sed -i 's/name="disk" value="1GiB"/name="disk" value="4GiB"/g' /etc/ImageMagick-6/policy.xml
 
 # Install locales
 RUN apt-get update && apt-get install -y locales && rm -rf /var/lib/apt/lists/* \
